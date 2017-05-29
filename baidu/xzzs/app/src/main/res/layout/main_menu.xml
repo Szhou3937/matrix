@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.kylive.xzzs.BaseLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_menu"
+    android:orientation="horizontal">
+
+     <cn.kylive.xzzs.BaseButton
+         android:id="@+id/btn_mainmenu_1"
+         android:text="@string/main_menu_management"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_margin="5dp"/>
+
+
+    <cn.kylive.xzzs.BaseButton
+        android:id="@+id/btn_mainmenu_2"
+        android:text="@string/main_menu_supervision"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5dp"/>
+
+
+    <cn.kylive.xzzs.BaseButton
+        android:id="@+id/btn_mainmenu_3"
+        android:text="@string/main_menu_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5dp"/>
+
+
+
+</cn.kylive.xzzs.BaseLinearLayout>

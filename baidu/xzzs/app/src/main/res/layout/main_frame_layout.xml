@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:clickable="true"
+        android:visibility="visible"/>
+
+    <cn.kylive.xzzs.BaseLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left">
+
+        <include layout="@layout/main_menu"/>
+
+    </cn.kylive.xzzs.BaseLinearLayout>
+
+
+
+
+</FrameLayout>

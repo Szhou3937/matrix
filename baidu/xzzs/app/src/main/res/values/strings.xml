@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">行政助手</string>
+    <string name="main_menu_management">管理</string>
+    <string name="main_menu_supervision">监督</string>
+    <string name="main_menu_search">查询</string>
 </resources>
