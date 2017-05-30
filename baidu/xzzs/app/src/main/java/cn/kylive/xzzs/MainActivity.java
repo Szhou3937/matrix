@@ -1,10 +1,12 @@
 package cn.kylive.xzzs;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -29,6 +31,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "XZZS";
+    private BaseButton mBtnManager = null;
 
     public MainActivity() {
     }
@@ -93,7 +96,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_frame_layout);
         mMapView = (MapView) findViewById(R.id.bmapView);
 
-
+        mBtnManager = (BaseButton)findViewById(R.id.btn_mainmenu_1);
+        mBtnManager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddBusinessActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -249,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
 
             // 设置定位图层的配置（定位模式，是否允许方向信息，用户自定义定位图标）
             mCurrentMarker = BitmapDescriptorFactory
-                    .fromResource(R.drawable.icon_geo);
+                    .fromResource(R.drawable.now_marker);
             MyLocationConfiguration config = new MyLocationConfiguration(mCurrentMode, true, mCurrentMarker);
             mBaiduMap.setMyLocationConfiguration(config);
 

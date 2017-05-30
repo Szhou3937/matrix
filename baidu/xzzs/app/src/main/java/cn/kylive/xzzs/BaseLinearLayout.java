@@ -12,4 +12,12 @@ public class BaseLinearLayout extends LinearLayoutCompat {
     public BaseLinearLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
+
+    public BaseLinearLayout(Context context) {
+        super(context);
+    }
+
+    public BaseLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
 }

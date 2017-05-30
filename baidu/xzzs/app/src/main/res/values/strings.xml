@@ -3,4 +3,18 @@
     <string name="main_menu_management">管理</string>
     <string name="main_menu_supervision">监督</string>
     <string name="main_menu_search">查询</string>
+
+
+    <string name="lisense_register_num">注册号</string>
+    <string name="lisense_id">证照编号</string>
+    <string name="lisense_company_name">名称</string>
+    <string name="lisense_company_type">类型</string>
+    <string name="lisense_address">地址</string>
+    <string name="lisense_legal_person">法定代表人</string>
+    <string name="lisense_registered_capital">注册资本</string>
+    <string name="lisense_foundation_date">成立日期</string>
+    <string name="lisense_operating_period">营业期限</string>
+    <string name="lisense_business_scope">经营范围</string>
+    <string name="lisense_register_office">登记机关</string>
+    <string name="lisense_register_date">登记日期</string>
 </resources>
