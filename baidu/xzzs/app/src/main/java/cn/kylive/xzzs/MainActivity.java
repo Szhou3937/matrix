@@ -3,8 +3,10 @@ package cn.kylive.xzzs;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "XZZS";
     private BaseButton mBtnManager = null;
+    private FloatingActionButton mFatBtn = null;
 
     public MainActivity() {
     }
@@ -93,6 +96,28 @@ public class MainActivity extends AppCompatActivity {
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.main_drawer_layout);
         mMapView = (MapView) findViewById(R.id.bmapView);
+        mFatBtn = (FloatingActionButton)findViewById(R.id.btn_fab);
+        mFatBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mLocationClient != null && mBaiduMap != null)
+                {
+                    //mLocationClient.stop();
+                    mLocation = mLocationClient.getLastKnownLocation();
+
+                    // 构造定位数据
+                    MyLocationData locData = new MyLocationData.Builder()
+                            .accuracy(mLocation.getRadius())
+                            // 此处设置开发者获取到的方向信息，顺时针0-360
+                            .direction(100).latitude(mLocation.getLatitude())
+                            .longitude(mLocation.getLongitude()).speed(2000).build();
+
+                    // 设置定位数据
+                    mBaiduMap.setMyLocationData(locData);
+                }
+
+            }
+        });
 
        /* mBtnManager = (BaseButton)findViewById(R.id.btn_mainmenu_1);
         mBtnManager.setOnClickListener(new View.OnClickListener() {

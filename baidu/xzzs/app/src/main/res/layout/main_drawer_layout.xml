@@ -4,13 +4,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.baidu.mapapi.map.MapView
-        android:id="@+id/bmapView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        android:visibility="visible"/>
-
 
         <android.support.design.widget.NavigationView
             android:layout_width="match_parent"
@@ -20,6 +13,27 @@
             app:headerLayout="@layout/nav_header">
 
         </android.support.design.widget.NavigationView>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/bmapView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:visibility="visible"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btn_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                app:elevation="8dp"
+                app:srcCompat="@drawable/now_marker" />
+        </android.support.design.widget.CoordinatorLayout>
+
 
 
 </android.support.v4.widget.DrawerLayout>
