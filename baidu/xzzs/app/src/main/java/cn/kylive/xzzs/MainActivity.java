@@ -1,12 +1,10 @@
 package cn.kylive.xzzs;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -93,17 +91,17 @@ public class MainActivity extends AppCompatActivity {
         //在使用SDK各组件之前初始化context信息，传入ApplicationContext
         //注意该方法要再setContentView方法之前实现
         SDKInitializer.initialize(getApplicationContext());
-        setContentView(R.layout.main_frame_layout);
+        setContentView(R.layout.main_drawer_layout);
         mMapView = (MapView) findViewById(R.id.bmapView);
 
-        mBtnManager = (BaseButton)findViewById(R.id.btn_mainmenu_1);
+       /* mBtnManager = (BaseButton)findViewById(R.id.btn_mainmenu_1);
         mBtnManager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddBusinessActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
     }
 

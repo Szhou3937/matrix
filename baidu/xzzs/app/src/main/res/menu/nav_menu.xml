@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" />
+    <item
+        android:id="@+id/nav_id_0"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="@string/main_menu_management" />
+    <item
+        android:id="@+id/nav_id_1"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="@string/main_menu_supervision" />
+
+    <item
+        android:id="@+id/nav_id_2"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="@string/main_menu_supervision" />
+
+    <item
+        android:id="@+id/nav_id_3"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="设置" />
+
+    <item
+        android:id="@+id/nav_id_4"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="关于" />
+</menu>
