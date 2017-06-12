@@ -1,7 +1,9 @@
 package cn.kylive.xzzs;
 
 import android.Manifest;
+import android.content.ContentValues;
 import android.content.pm.PackageManager;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +28,8 @@ import com.baidu.mapapi.model.LatLng;
 
 import java.util.List;
 
+import cn.kylive.xzzs.db.MyDatabase;
+
 //定位相关
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "XZZS";
     private BaseButton mBtnManager = null;
     private FloatingActionButton mFatBtn = null;
+    private MyDatabase dbHelper = null;
 
     public MainActivity() {
     }
@@ -128,6 +133,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
+       dbHelper = new MyDatabase(this, "mydb", null, 1);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+        cv.put("license_id", "000001");
+        cv.put("company_name", "miaojiang ltd");
+        cv.put("boss_name", "shang.zhou");
+        db.insert("business_license", null, cv);
     }
 
     @Override
